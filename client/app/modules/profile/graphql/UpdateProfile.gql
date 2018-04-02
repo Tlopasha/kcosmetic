@@ -1,0 +1,21 @@
+# #import "gql/person/Profile.gql"
+# #import "gql/person/SocialProfile.gql"
+
+# mutation updateUser($profile: ProfileInput!) {
+#   updateUser(profile: $profile) {
+#      ...profileFields
+#     email
+#     status
+#     profile {
+#       ...SocialProfile
+#     }
+#   }
+# }
+
+
+mutation updateUser($profile: ProfileInput!) {
+  updateUser(profile: $profile) {
+    msgCnt
+    stsCd
+  }
+}

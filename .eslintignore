@@ -1,0 +1,5 @@
+server/public/**/*.js
+server/bundle.js
+node_modules
+webpack/*.js
+client/frontend/main.js

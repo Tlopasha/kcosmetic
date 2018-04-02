@@ -1,0 +1,6 @@
+fragment SocialProfile on SocialProfile {
+  name
+  gender
+  picture
+  location
+}

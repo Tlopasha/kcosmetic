@@ -1,0 +1,13 @@
+export const GET_DATAS = 'GET_DATAS';
+export const FULLLOADING = 'FULLLOADING';
+export const TIME = 'TIME';
+export const VISABLERESULT = 'VISABLERESULT';
+export const VISABLEDEPTH = 'VISABLEDEPTH';
+export const FILL_RESULT = 'FILL_RESULT';
+export const IS_RESCORED = 'IS_RESCORED';
+export const IS_DENIED = 'IS_DENIED';
+export const SHOW_DEPTH_POINT = 'SHOW_DEPTH_POINT';
+export const UPDATE_CURRENCY = 'UPDATE_CURRENCY';
+export const UPDATE_SELECTED_COMPANY = 'UPDATE_SELECTED_COMPANY';
+export const PROGRESS_NO = 'PROGRESS_NO';
+export const SET_DEFAULT_VALUE = 'SET_DEFAULT_VALUE';

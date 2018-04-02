@@ -1,0 +1,10 @@
+fragment personFields on Person {
+  code
+  fullName
+  username
+  roles
+  avatar
+  lastLogin
+  user_type
+  referal_key
+}

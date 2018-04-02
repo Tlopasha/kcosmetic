@@ -1,0 +1,14 @@
+
+query {
+  getProfile {
+    code
+    email
+    status
+    fullName
+    username
+    avatar
+    phone
+    referal_key
+    api_key
+  }
+}

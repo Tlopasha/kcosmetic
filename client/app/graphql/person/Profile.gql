@@ -1,0 +1,10 @@
+fragment profileFields on Profile {
+  code
+  fullName
+  username
+  roles
+  avatar
+  lastLogin
+  user_type  
+  referal_key
+}

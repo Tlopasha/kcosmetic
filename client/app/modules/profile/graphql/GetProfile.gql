@@ -1,0 +1,13 @@
+#import "gql/person/Profile.gql"
+#import "gql/person/SocialProfile.gql"
+
+query {
+  profile {
+    ...profileFields
+    email
+    status
+    profile {
+      ...SocialProfile
+    }
+  }
+}

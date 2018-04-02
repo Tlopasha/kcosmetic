@@ -1,0 +1,21 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "node": "current",
+        "browsers": ["last 2 Chrome versions"]
+      },
+      "exclude": ["transform-async-to-generator"]
+    }]
+  ],
+  "plugins": [
+    "transform-object-rest-spread", ["transform-runtime", {
+      "helpers": false,
+      "polyfill": false,
+      "regenerator": true,
+      "moduleName": "babel-runtime"
+    }]
+  ],
+  "retainLines": true,
+  "comments": false
+}

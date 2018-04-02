@@ -1,0 +1,100 @@
+version: 2
+defaults: &defaults
+  working_directory: ~/credit-score
+  docker:
+    - image: circleci/node:8.9.4
+
+jobs:
+  build:
+    <<: *defaults
+    steps:
+      - checkout
+      - run: ls -alh ~/
+      - run: pwd
+      - run: ls -alh
+
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-
+
+      - run: yarn install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      - persist_to_workspace:
+          root: /home/circleci/credit-score
+          paths:
+            - node_modules
+            - dist
+            - bin
+            - client
+            - server
+            - tests
+            - webpack
+            - .babelrc
+            - .eslintignore
+            - .eslintrc.js
+            - .jshintrc
+            - cluster.js
+            - typings.json
+            - postcss.config.js
+            - jsconfig.json
+            - package.json
+            - yarn.lock
+
+      - run: mkdir -p dist
+
+  lint:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: /home/circleci/credit-score
+      - run: ls -alh
+      - run:
+          name: Linting
+          command: yarn lint
+
+  testUnit:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: /home/circleci/credit-score
+      - run: ls -alh
+      - run:
+          name: Running Unit Test
+          command: yarn test:unit
+      - store_test_results:
+          path: results
+
+  deploy:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: /home/circleci/credit-score
+      - run: mkdir -p dist
+      - run: yarn build
+      - run: yarn build:server
+      - run: bash bin/deploy.sh
+
+workflows:
+  version: 2
+  build_test_lint_and_deploy:
+    jobs:
+      - build
+      - testUnit:
+          requires:
+            - build
+      - lint:
+          requires:
+            - build
+      - deploy:
+          filters:
+            branches:
+              only: master
+          requires:
+            - testUnit
+            - lint
