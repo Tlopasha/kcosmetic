@@ -39,7 +39,7 @@ const parseRow = (row) => {
  *      {
  *         stt: '1',
  *         mst: '0314137855',
- *         nguoi_nop_thue: 'CÔNG TY TNHH PHẦN MỀM LTV',
+ *         nguoi_nop_thue: 'CÔNG TY TNHH PHẦN',
  *         co_quan_thue: 'Chi cục Thuế Quận Tân Bình',
  *         cmt: '142523667',
  *         ngay_cap_nhat: '19/01/2017',

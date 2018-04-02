@@ -16,8 +16,8 @@ module.exports = {
     title: pkg.title,
     version: pkg.version,
     description: pkg.description,
-    keywords: 'ltv, coffee, webapp',
-    url: 'https://ltv.vn/',
+    keywords: 'coffee, webapp',
+    url: 'https://google.com',
     // googleAnalyticsID: 'UA-xxxxx-x',
     contactEmail: 'nhut@ltv.vn'
   },

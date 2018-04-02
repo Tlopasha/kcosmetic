@@ -38,7 +38,7 @@
   "config": {
     "dbName": "kcosmetic"
   },
-  "author": "Nhut Vo <nhut@ltv.vn>",
+  "author": "Nhut Vo",
   "private": true,
   "dependencies": {
     "apollo-cache-inmemory": "^1.1.5",

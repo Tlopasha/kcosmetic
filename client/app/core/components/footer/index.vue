@@ -4,18 +4,18 @@ footer.footer
     nav
       ul
         li
-          a(href='https://ltv.vn')
+          a(href='https://kcosmetic.vn')
             | LTV Co., Ltd
         li
-          a(href='https://ltv.vn/about')
+          a(href='https://kcosmetic.vn/about')
             | About Us
         li
-          a(href='https://blog.ltv.vn')
+          a(href='https://blog.kcosmetic.vn')
             | Blog
     .copyright
       | ©
       | {{year}} 
-      a(href='https://ltv.vn', target='_blank') LTV Co., Ltd
+      a(href='https://kcosmetic.vn', target='_blank') LTV Co., Ltd
       | .
 </template>
 

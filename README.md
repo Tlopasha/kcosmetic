@@ -1,6 +1,3 @@
-# ltv
-LTV Website and Project Management System
-
 ## Usage
 Install dependencies
 ```bash
@@ -53,7 +50,4 @@ If you want to bundle your NodeJS server-side code run webpack on server code   
 
 ## Features
 
-
-## Author
-Nhut Vo <nhut@ltv.vn>
 
